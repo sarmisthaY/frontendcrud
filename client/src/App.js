@@ -1,10 +1,15 @@
-// import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import TableData from './component/TableData';
+import CreateData from './component/createData';
 
 function App() {
   return (
-    <div>
-      <h4>Welcome to the beatiful world of mine</h4>
-    </div>
+    <>
+      <Switch>
+        <Route exact path='/' component={TableData}></Route>
+        <Route exact path='/create' component={CreateData}></Route>
+      </Switch>
+    </>
   );
 }
 
